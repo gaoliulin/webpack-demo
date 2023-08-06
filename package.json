@@ -20,7 +20,9 @@
     "url": "https://github.com/gaoliulin/webpack-1/issues"
   },
   "homepage": "https://github.com/gaoliulin/webpack-1#readme",
-  "dependencies": {
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
