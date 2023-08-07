@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test1": "echo \"Error: no test specified\" && exit 1",
-    "test2": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx webpack-dev-server --mode development --progress --color --open",
+    "dev1": "npx webpack-dev-server",
     "webpack-config": "npx webpack --config webpack.config.js",
     "webpack": "webpack"
   },
@@ -24,6 +25,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
