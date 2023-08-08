@@ -1,2 +1,5 @@
 
-console.log('init js,')
+console.log('init')
+setTimeout(()=>{
+    console.log('setTimeout')
+}, 3000)
