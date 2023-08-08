@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test1": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx webpack-dev-server --mode development --progress --color --open",
-    "dev1": "npx webpack-dev-server",
-    "webpack-config": "npx webpack --config webpack.config.js",
-    "webpack": "webpack"
+    "dev": "webpack-dev-server --config webpack.config.js",
+    "build": "npx webpack --config webpack.config.js",
+    "webpack": "webpack",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
