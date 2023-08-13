@@ -10,9 +10,9 @@
     "dev1": "webpack-dev-server --config webpack.config.js",
     "start": "webpack serve --open",
     "build": "webpack --config webpack.config.js",
-    "dev2": "webpack server --config ./build/webpack.dev.config.js",
-    "prod": "webpack server --config webpack.prod.config.js",
-    "build2": "webpack --config  ./build/webpack.prod.config.js"
+    "dev2": "webpack server --config ./config/webpack.dev.config.js",
+    "prod": "webpack server --config ./config/webpack.prod.config.js",
+    "build2": "webpack --config  ./config/webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
