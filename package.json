@@ -9,7 +9,10 @@
     "dev": "webpack server --config webpack.config.js",
     "dev1": "webpack-dev-server --config webpack.config.js",
     "start": "webpack serve --open",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "dev2": "webpack server --config ./build/webpack.dev.config.js",
+    "prod": "webpack server --config webpack.prod.config.js",
+    "build2": "webpack --config  ./build/webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,7 @@
     "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
   }
 }
