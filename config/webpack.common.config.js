@@ -34,11 +34,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'less-loader']
             },
             {
-                test: /\.js$/,
-                use: ['babel-loader']
-            },
-            {
-                test:/\.js$/, //已作为js扩展名这样类型的文件
+                test: /\.(jsx|js)$/, //已作为js扩展名这样类型的文件  
                 exclude:/node_modules/, //排除node_modules文件夹
                 use:{
                     loader:'babel-loader', //转换成es5
