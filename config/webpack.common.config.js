@@ -23,7 +23,17 @@ module.exports = {
         clean: true,
     },
     module: {
-        rules: [],
+        //文件后缀名的匹配规则 匹配到test指定的文件类型 使用use中对应的loader
+        rules: [
+            {
+                test: /\.css$/, // 匹配CSS文件  
+                use: ['style-loader', 'css-loader'] // 使用style-loader和css-loader
+            },
+            {
+                test: /\.less$/, 
+                use: ['style-loader', 'css-loader', 'less-loader']
+            },
+        ],
     },
     plugins:[
         new CleanWebpackPlugin(), // 先清除，在打包
