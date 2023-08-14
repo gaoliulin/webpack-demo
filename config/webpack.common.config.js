@@ -33,7 +33,26 @@ module.exports = {
                 test: /\.less$/, 
                 use: ['style-loader', 'css-loader', 'less-loader']
             },
+            {
+                test: /\.js$/,
+                use: ['babel-loader']
+            },
+            {
+                test:/\.js$/, //已作为js扩展名这样类型的文件
+                exclude:/node_modules/, //排除node_modules文件夹
+                use:{
+                    loader:'babel-loader', //转换成es5
+                    options:{
+                        presets:['@babel/preset-env'], //设置编译的规则
+                    },
+                    plugins:[ // 设置编译的插件
+                        ['@babel/plugin-transform-runtime'] //设置编译的规则
+                    ],
+                }
+            },
+
         ],
+
     },
     plugins:[
         new CleanWebpackPlugin(), // 先清除，在打包
