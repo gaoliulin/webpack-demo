@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "declarationMap": true, // 开启map文件调试使用
+      "sourceMap": true,
+      "target": "es5", // 转换为Es5语法
+    }
+}

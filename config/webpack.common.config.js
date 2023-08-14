@@ -46,6 +46,11 @@ module.exports = {
                     ],
                 }
             },
+            {
+                test: /\.ts$/,
+                use: "ts-loader",
+                exclude:/node_modules/, //排除node_modules文件夹
+            },
 
         ],
 
