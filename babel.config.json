@@ -9,8 +9,8 @@
                 "chrome": "67",
                 "safari": "11.1"
                 },
-                "useBuiltIns": "usage",
-                "corejs": "3"
+                "useBuiltIns": "usage", // // 做@babel/polyfill补充时，按需补充，用到什么才补充什么,
+                "corejs": "3" //  corejs 配置依赖的是 `core-js`, 需安装 core-js
             }
         ],
         [
@@ -25,7 +25,7 @@
 		[
 		"@babel/plugin-transform-runtime",
 			{
-				"corejs": 3,
+				"corejs": 3, //  corejs 配置依赖的是 `@babel/runtime-corejs3`, 需安装 @babel/runtime-corejs3 
 				"helpers": true,
 				"regenerator": true,
 				"useESModules": false

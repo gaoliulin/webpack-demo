@@ -38,12 +38,12 @@ module.exports = {
                 exclude:/node_modules/, //排除node_modules文件夹
                 use:{
                     loader:'babel-loader', //转换成es5
-                    options:{
-                        presets:['@babel/preset-env'], //设置编译的规则
-                    },
-                    plugins:[ // 设置编译的插件
-                        ['@babel/plugin-transform-runtime'] //设置编译的规则
-                    ],
+                    // options:{
+                    //     presets:['@babel/preset-env'], //设置编译的规则
+                    // },
+                    // plugins:[ // 设置编译的插件
+                    //     ['@babel/plugin-transform-runtime'] //设置编译的规则
+                    // ],
                 }
             },
             {
