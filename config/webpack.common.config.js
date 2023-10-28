@@ -27,17 +27,27 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/, // 匹配CSS文件  
-                use: ['style-loader', 'css-loader'] // 使用style-loader和css-loader
+                use: [
+                    'style-loader', 
+                    'css-loader', 
+                    'postcss-loader' // 配置抽离到 postcss.config.js 文件了
+                ] // 使用style-loader和css-loader
             },
             {
                 test: /\.less$/, 
-                use: ['style-loader', 'css-loader', 'less-loader']
+                use: [
+                    'style-loader', 
+                    'css-loader', 
+                    'postcss-loader', // 配置抽离到 postcss.config.js 文件了。 必须先 postcss-loader，然后 css-loader，否则会报错
+                    'less-loader',
+                ]
             },
             {
                 test: /.s[ac]ss$/i, // 匹配sass  scss 文件
                 use: [
                     'style-loader', // 将 JS 字符串生成为 style 节点
                     'css-loader',  // 将 CSS 转化成 CommonJS 模块
+                    'postcss-loader', // 配置抽离到 postcss.config.js 文件了。 必须先 postcss-loader，然后 css-loader，否则会报错
                     'sass-loader' // 将sass 编译成 CSS
                 ] 
             },
