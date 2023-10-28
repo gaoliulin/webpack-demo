@@ -69,62 +69,40 @@ module.exports = {
                 use: "ts-loader",
                 exclude:/node_modules/, //排除node_modules文件夹
             },
-            // // 打包字体图标规则
-            // {
-            //     test: /.(eot|json|svg|ttf|woff|woff2)$/,
-            //     use: [
-            //     {
-            //         loader: "file-loader",
-            //         options: {
-            //             // 指定打包后文件名称
-            //             name: "[name].[ext]",
-            //             // 指定打包后文件存放目录
-            //             outputPath: "font/",
-            //         },
-            //     },
-            //     ],
-            // },
-            // //打包图片规则
-            // {
-            //     test: /.(png|jpe?g|gif)$/i,
-            //     use: [
-            //     {
-            //         loader: "file-loader",
-            //         options: {
-            //             // 指定打包后文件名称
-            //             name: "[path][name].[ext]",
-            //             // 指定打包后文件存放目录
-            //             outputPath: "images",
-            //             // 指定托管服务器地址(统一替换图片地址)
-            //             publicPath: "assets",
-            //         },
-            //     },
-            //     ],
-            // },
-            // {
-            //     test: /.(png|jpe?g|gif)$/i,
-            //     use: [
-            //       {
-            //         loader: "url-loader",
-            //         options: {
-            //           /**
-            //            * limit: 指定图片限制的大小
-            //            * 如果被打包的图片超过了限制的大小, 就会将图片保存为一个文件
-            //            * 如果被打包的图片没有超过限制的大小, 就会将图片转换成base64的字符串
-            //            * 注意点:
-            //            * 对于比较小的图片, 我们将图片转换成base64的字符串之后, 可以提升网页的性能(因为减少了请求的次数)
-            //            * 对于比较大的图片, 哪怕我们将图片转换成了base64的字符串之后, 也不会提升网页的性能, 还有可能降低网页的性能
-            //            * (因为图片如果比较大, 那么转换之后的字符串也会比较多, 那么网页的体积就会表达, 那么访问的速度就会变慢)
-            //            * */
-            //           limit: 1024 * 100,
-            //           // 指定打包后文件名称
-            //           name: "[path][name].[ext]",
-            //           // 指定打包后文件存放目录
-            //           outputPath: "images",
-            //         },
-            //       },
-            //     ],
-            // },
+            {
+                //处理图片的
+                test: /.(png|jpe?g|gif|webp)$/,
+                type: "asset",
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 10 * 1024, // 小于10kb的图片会被base64处理
+                    },
+                },
+                generator: {
+                    // 将图片文件输出到 static/imgs 目录中
+                    // 将图片文件命名 [hash:8][ext][query]
+                    // [hash:8]: hash值取8位
+                    // [ext]: 使用之前的文件扩展名
+                    // [query]: 添加之前的query参数
+                    filename: "static/imgs/[hash:8][ext][query]",
+                },
+              },
+              {
+                //处理字体
+                test: /.(ttf|woff2?)$/,
+                type: "asset/resource",
+                generator: {
+                    filename: "static/media/[hash][ext][query]",
+                },
+              },
+              {
+                //处理视频和音频
+                test: /.(ttf|woff2?|map4|map3|avi)$/,
+                type: "asset/resource",
+                generator: {
+                    filename: "static/media/[hash][ext][query]",
+                },
+              },
 
 
         ],
