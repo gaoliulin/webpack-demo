@@ -34,6 +34,14 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'less-loader']
             },
             {
+                test: /.s[ac]ss$/i, // 匹配sass  scss 文件
+                use: [
+                    'style-loader', // 将 JS 字符串生成为 style 节点
+                    'css-loader',  // 将 CSS 转化成 CommonJS 模块
+                    'sass-loader' // 将sass 编译成 CSS
+                ] 
+            },
+            {
                 test: /\.(jsx|js)$/, //已作为js扩展名这样类型的文件  
                 exclude:/node_modules/, //排除node_modules文件夹
                 use:{
