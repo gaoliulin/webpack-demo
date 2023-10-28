@@ -69,6 +69,39 @@ module.exports = {
                 use: "ts-loader",
                 exclude:/node_modules/, //排除node_modules文件夹
             },
+            // // 打包字体图标规则
+            // {
+            //     test: /.(eot|json|svg|ttf|woff|woff2)$/,
+            //     use: [
+            //     {
+            //         loader: "file-loader",
+            //         options: {
+            //             // 指定打包后文件名称
+            //             name: "[name].[ext]",
+            //             // 指定打包后文件存放目录
+            //             outputPath: "font/",
+            //         },
+            //     },
+            //     ],
+            // },
+            // //打包图片规则
+            // {
+            //     test: /.(png|jpe?g|gif)$/i,
+            //     use: [
+            //     {
+            //         loader: "file-loader",
+            //         options: {
+            //             // 指定打包后文件名称
+            //             name: "[path][name].[ext]",
+            //             // 指定打包后文件存放目录
+            //             outputPath: "images",
+            //             // 指定托管服务器地址(统一替换图片地址)
+            //             publicPath: "assets",
+            //         },
+            //     },
+            //     ],
+            // },
+
 
         ],
 
