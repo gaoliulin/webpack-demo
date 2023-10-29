@@ -12,6 +12,7 @@ const { merge } = require('webpack-merge');
    devServer: {
     static: { // 服务器加载文件路径， 5.x 版本已改为  static 配置
       directory: path.join(__dirname, 'dist'),
+      // hot: true,
     },
     // contentBase: path.join(__dirname, "dist"), // 服务器加载文件路径 ， 4.X版本的配置项， 5.x 版本已改为  static 配置
     compress: true,

@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 // 引入路径path模块
 const path = require('path');
 // 引入 HtmlWebpackPlugin 模块
@@ -86,29 +87,28 @@ module.exports = {
                     // [query]: 添加之前的query参数
                     filename: "static/imgs/[hash:8][ext][query]",
                 },
-              },
-              {
+            },
+            {
                 //处理字体
                 test: /.(ttf|woff2?)$/,
                 type: "asset/resource",
                 generator: {
                     filename: "static/media/[hash][ext][query]",
                 },
-              },
-              {
+            },
+            {
                 //处理视频和音频
                 test: /.(ttf|woff2?|map4|map3|avi)$/,
                 type: "asset/resource",
                 generator: {
                     filename: "static/media/[hash][ext][query]",
                 },
-              },
-
-
+            },
         ],
-
     },
     plugins:[
+        // new webpack.ids.NamedModuleIdsPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(), // 先清除，在打包
         new HtmlWebpackPlugin({
             title: 'webpack 脚手架', //  生成html的标题
