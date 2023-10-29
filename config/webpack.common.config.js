@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 //引入 CleanWebpackPlugin 模块
 var { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ESLintWebpackPlugin = require("eslint-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 console.log("__dirname--", __dirname);
 
@@ -30,6 +31,7 @@ module.exports = {
       {
         test: /\.css$/, // 匹配CSS文件
         use: [
+          MiniCssExtractPlugin.loader,
           "style-loader",
           "css-loader",
           "postcss-loader", // 配置抽离到 postcss.config.js 文件了
@@ -38,6 +40,7 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
+          MiniCssExtractPlugin.loader,
           "style-loader",
           "css-loader",
           "postcss-loader", // 配置抽离到 postcss.config.js 文件了。 必须先 postcss-loader，然后 css-loader，否则会报错
@@ -47,6 +50,7 @@ module.exports = {
       {
         test: /.s[ac]ss$/i, // 匹配sass  scss 文件
         use: [
+          MiniCssExtractPlugin.loader,
           "style-loader", // 将 JS 字符串生成为 style 节点
           "css-loader", // 将 CSS 转化成 CommonJS 模块
           "postcss-loader", // 配置抽离到 postcss.config.js 文件了。 必须先 postcss-loader，然后 css-loader，否则会报错
