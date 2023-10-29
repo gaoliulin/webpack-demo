@@ -17,10 +17,12 @@ module.exports = {
       jsx: true, // 如果是 React 项目，就需要开启 jsx 语法
     },
   },
-  "plugins": [
+  parser: "@typescript-eslint/parser",
+  plugins: [
     "html", // eslint-plugin-html
     "node", // eslint-plugin-node
-    "promise" // eslint-plugin-promise
+    "promise", // eslint-plugin-promise
+    "@typescript-eslint"  // @typescript-eslint/eslint-plugin
   ],
   // 禁用 eslint-plugin-html  插件
   "settings": {
@@ -53,6 +55,9 @@ module.exports = {
     'standard/object-curly-even-spacing': [2, "either"],
     'standard/array-bracket-even-spacing': [2, "either"],
     'standard/computed-property-even-spacing': [2, "even"],
-    'standard/no-callback-literal': [2, ["cb", "callback"]]
+    'standard/no-callback-literal': [2, ["cb", "callback"]],
+
+    // 及下面几个配置为  @typescript-eslint/eslint-plugin
+    "@typescript-eslint/no-unused-vars": "error"
   },
 };
