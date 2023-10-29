@@ -47,6 +47,12 @@ module.exports = {
     "promise/no-promise-in-callback": "warn",
     "promise/no-callback-in-promise": "warn",
     "promise/avoid-new": "warn",
-    "promise/no-return-in-finally": "warn"
+    "promise/no-return-in-finally": "warn",
+
+    // 及下面几个配置为  eslint-plugin-standard 
+    'standard/object-curly-even-spacing': [2, "either"],
+    'standard/array-bracket-even-spacing': [2, "either"],
+    'standard/computed-property-even-spacing': [2, "even"],
+    'standard/no-callback-literal': [2, ["cb", "callback"]]
   },
 };
