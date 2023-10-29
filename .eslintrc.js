@@ -6,7 +6,8 @@ module.exports = {
   // 继承 Eslint 规则
   extends: [
     "eslint:recommended", 
-    "plugin:node/recommended" // eslint-plugin-node
+    "plugin:node/recommended", // eslint-plugin-node
+    "plugin:react/recommended"
   ],
   parserOptions: {
     // 解析选项
