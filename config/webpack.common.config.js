@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 var { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ESLintWebpackPlugin = require("eslint-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 console.log("__dirname--", __dirname);
 
@@ -112,6 +113,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new BundleAnalyzerPlugin(),
     new ESLintWebpackPlugin({
       context: path.resolve(__dirname, "src"),
     }),
