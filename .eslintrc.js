@@ -22,5 +22,10 @@ module.exports = {
   rules: {
     "no-var": "off",
     "no-console": "off",
+    // "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    // "import/named": 2,
+    // "import/namespace": 2,
+    // "import/default": 2,
+    // "import/export": 1, //  `"off"` 或 `0`  `"warn"` 或 `1`   `"error"` 或 `2`
   },
 };
