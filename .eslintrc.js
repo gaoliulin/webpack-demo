@@ -22,7 +22,8 @@ module.exports = {
     "html", // eslint-plugin-html
     "node", // eslint-plugin-node
     "promise", // eslint-plugin-promise
-    "@typescript-eslint"  // @typescript-eslint/eslint-plugin
+    "@typescript-eslint",  // @typescript-eslint/eslint-plugin
+    "react" // eslint-plugin-react 的简写
   ],
   // 禁用 eslint-plugin-html  插件
   "settings": {
@@ -58,6 +59,31 @@ module.exports = {
     'standard/no-callback-literal': [2, ["cb", "callback"]],
 
     // 及下面几个配置为  @typescript-eslint/eslint-plugin
-    "@typescript-eslint/no-unused-vars": "error"
+    "@typescript-eslint/no-unused-vars": "error",
+
+    // eslint-plugin-react
+    'react/display-name': 2,
+    'react/jsx-key': 2,
+    'react/jsx-no-comment-textnodes': 2,
+    'react/jsx-no-duplicate-props': 2,
+    'react/jsx-no-target-blank': 2,
+    'react/jsx-no-undef': 2,
+    'react/jsx-uses-react': 2,
+    'react/jsx-uses-vars': 2,
+    'react/no-children-prop': 2,
+    'react/no-danger-with-children': 2,
+    'react/no-deprecated': 2,
+    'react/no-direct-mutation-state': 2,
+    'react/no-find-dom-node': 2,
+    'react/no-is-mounted': 2,
+    'react/no-render-return-value': 2,
+    'react/no-string-refs': 2,
+    'react/no-unescaped-entities': 2,
+    'react/no-unknown-property': 2,
+    'react/no-unsafe': 0,
+    'react/prop-types': 2,
+    'react/react-in-jsx-scope': 2,
+    'react/require-render-return': 2,
+
   },
 };
