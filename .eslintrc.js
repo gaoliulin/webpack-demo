@@ -4,7 +4,10 @@ module.exports = {
     browser: true, // 启用浏览器中全局变量
   },
   // 继承 Eslint 规则
-  extends: ["eslint:recommended"],
+  extends: [
+    "eslint:recommended", 
+    "plugin:node/recommended" // eslint-plugin-node
+  ],
   parserOptions: {
     // 解析选项
     ecmaVersion: 10, // ES 语法版本
@@ -14,7 +17,10 @@ module.exports = {
       jsx: true, // 如果是 React 项目，就需要开启 jsx 语法
     },
   },
-  "plugins": ["html"],
+  "plugins": [
+    "html", // eslint-plugin-html
+    "node" // eslint-plugin-node
+  ],
   // 禁用 eslint-plugin-html  插件
   "settings": {
     "html/html-extensions": [".html", ".vue"]
@@ -22,7 +28,7 @@ module.exports = {
   rules: {
     "no-var": "off",
     "no-console": "off",
-    // "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    // "import/no-unresolved": [2, { "commonjs": true, "amd": true }], // 及下面几个配置为  eslint-plugin-import 
     // "import/named": 2,
     // "import/namespace": 2,
     // "import/default": 2,
