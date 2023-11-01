@@ -6,9 +6,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 //引入 CleanWebpackPlugin 模块
 var { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ESLintWebpackPlugin = require("eslint-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 console.log("__dirname--", __dirname);
 
@@ -114,6 +115,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     // new BundleAnalyzerPlugin(), // 如需要分析资源大小可放开，平时可注释
     new StyleLintPlugin({}), // 具体配置 暂时用默认
     new ESLintWebpackPlugin({
