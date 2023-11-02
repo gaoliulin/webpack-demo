@@ -1,5 +1,15 @@
 # webpack 学习使用，搭建脚手架
 
+## 文档1： webpack 一基础配置： 学习使用，搭建脚手架  https://juejin.cn/post/7264503091122569231
+
+## 文档2： webpack 二基础配置：配置loader  https://juejin.cn/post/7267107941651496960
+
+## 文档3： webpack 三基础配置：配置plugins  https://juejin.cn/post/7293125177322897448
+
+## 文档4： webpack5 配置babel  https://juejin.cn/post/7293738741398585378
+
+## 文档5： webpack5 配置 eslint  https://juejin.cn/post/7294954501576065039
+
 ## 一：初始配置，项目目录
 
 - 1.1 git init 初始化
