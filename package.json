@@ -4,7 +4,15 @@
   "description": "webpack 学习使用，搭建脚手架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack server --config webpack.config.js",
+    "dev1": "webpack-dev-server --config webpack.config.js",
+    "start": "webpack serve --open",
+    "build": "webpack --config webpack.config.js",
+    "dev2": "webpack server --config ./config/webpack.dev.config.js",
+    "prod": "webpack server --config ./config/webpack.prod.config.js",
+    "build2": "webpack --config  ./config/webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +23,48 @@
   "bugs": {
     "url": "https://github.com/gaoliulin/webpack-1/issues"
   },
-  "homepage": "https://github.com/gaoliulin/webpack-1#readme"
+  "homepage": "https://github.com/gaoliulin/webpack-1#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/plugin-transform-runtime": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-typescript": "^7.22.5",
+    "@babel/runtime": "^7.22.10",
+    "@babel/runtime-corejs3": "^7.23.2",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "autoprefixer": "^10.4.16",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.32.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.52.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^9.18.1",
+    "eslint-webpack-plugin": "^4.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "less-loader": "^11.1.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-loader": "^2.0.0",
+    "postcss": "^8.4.31",
+    "postcss-loader": "^7.3.3",
+    "postcss-pxtorem": "^6.0.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "stylelint": "^15.11.0",
+    "stylelint-webpack-plugin": "^4.1.1",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  }
 }
